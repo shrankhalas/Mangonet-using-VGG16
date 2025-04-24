@@ -50,16 +50,39 @@
             font-size: 14px;
             color: #888;
         }
+
+        #preview {
+            max-width: 300px;
+            margin-top: 20px;
+            display: none;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
     <div class="upload-box">
         <h1>Upload a Mango Image</h1>
         <form method="POST" action="/predict" enctype="multipart/form-data">
-            <input type="file" name="image" required><br>
+            <input type="file" name="image" id="image" accept="image/*" required onchange="previewImage(event)">
+            <br>
+            <img id="preview" src="#" alt="Image Preview">
+            <br><br>
             <input type="submit" value="Classify">
         </form>
         <div class="footer-note">Supported formats: JPG, PNG</div>
     </div>
+
+    <script>
+        function previewImage(event) {
+            const preview = document.getElementById('preview');
+            const file = event.target.files[0];
+
+            if (file) {
+                preview.src = URL.createObjectURL(file);
+                preview.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
