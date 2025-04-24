@@ -11,7 +11,7 @@ app = Flask(__name__)
 model = load_model("mango_classification_model.h5")
 
 # List of class names
-class_names = ['Alphonso', 'Badami', 'Banganapalli', 'Chaunsa', 'Dasheri', 'Kesar', 'Langra', 'Neelum']
+class_names = ['Anwar Ratool', 'Chaunsa (Black)', 'Chaunsa (Summer Bahisht)', 'Chaunsa (White)', 'Dosehri', 'Fajri', 'Langra', 'Sindhri']
 
 # Route to serve uploaded images
 @app.route('/uploads/<filename>')
