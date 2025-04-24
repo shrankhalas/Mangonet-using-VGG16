@@ -2,10 +2,59 @@
 <html>
 <head>
     <title>Welcome to Mango Classifier</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Mango Ripeness Classifier</h1>
-    <p>Click below to upload an image of a mango for classification.</p>
-    <a href="/upload"><button>Upload Image</button></a>
+    <div class="container">
+        <h1>Mango Ripeness Classifier</h1>
+        <p>Click below to upload an image of a mango for classification.</p>
+        <a href="/upload"><button>Upload Image</button></a>
+    </div>
 </body>
 </html>
